@@ -399,7 +399,7 @@ WeakSet 不能遍历，是因为成员都是弱引用，随时可能消失，遍
 const foos = new WeakSet()
 class Foo {
   constructor() {
-    foos.add(this)
+    foos.add(Foo)
   }
   method () {
     if (!foos.has(this)) {
